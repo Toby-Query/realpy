@@ -4,8 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>realpy</h1>
+    <h1>Anonymous Functions/ Lambda Expressions</h1>
+    <p><u>Muthuphei Mukhunyeledzi</u></p>
+    <p>
+      Back in my first year we held weekly competitions to see who can write the
+      shortest python code to solve the exact same problem, and we had a motto
+      to go along with it "If you don't want it short, why Python?" <br />
+      That's when I was introduced to lambda functions, they feel a bit different from the rest of the language but they are as simple.
+      By the end of this, you'll be asking yourself why you were avoiding them in the first place.
+    </p>
+    <h2>So, what is a Lambda Function?</h2>
+    <p>
+      A lambda function, also known as an anonoymous function, is a nameless function
+      defined using the lambda keyword. Unlike regular functions defined with
+      the def keyword, lambda functions can only have one expression. The
+      expression is evaluated and returned. (You don't explicitly "return") <br /> <br>
+      The basic syntax of a lambda function is as follows:
+    </p>
+    <code>
+       lambda argument(s): expression</code>
+    <p>Below is an example:</p>
+    <code>
+      # A regular function that squares an input <br />
+      def square(x): <br />
+      <div class="s1">return x*x</div>
+      <br /> <br>
+      # A lambda function that does the same <br />
+      square1 = lambda x: x*x <br /> <br>
+      # Using both functions <br />
+      print(square(5)) 
+      #Output: 25 <br />
+      print(square1(5)) # Output: 25 <br /> <br>
+
+      #Immediately invoking the function <br>
+      print((lambda x: x*x)(5)) # Output: 25<br> <br>
+
+      
+      #You can have as many arguments as you want <br />
+      multipleArguments = lambda x, y, z: x+y+z
+    </code>
+    <h2>When to use lambda functions?</h2>
+    <p>
+      <ul>
+        <li>
+          Lambda functions are best used for simple operations where a full
+          function definition would be overkill.
+        </li>
+        <li>
+          When you need a simple function for a short period, using a lambda
+          function avoids cluttering your code with multiple def statements.
+        </li>
+        <li>
+          For inline function definitions.
+        </li>
+    </ul>
+    </p>
+    <h2>Common uses for lambda functions</h2>
+    <p>
+      Lambda functions are often used with functional programming constructs
+      like map(), reduce(), and filter() to process data in a functional style.
+      Below is an example of using it with filter() and map():
+    </p>
+    <code>
+      # Doubling each number in a list <br />
+      doubled_numbers = list(map(lambda x: x * 2, numbers)) <br />
+      print(doubled_numbers) # Output: [2, 4, 6, 8, 10, 12] <br /> <br>
+      # Filtering even numbers from a list <br />
+      numbers = [1, 2, 3, 4, 5, 6] <br />
+      even_numbers = list(filter(lambda x: x % 2 == 0, numbers)) <br />
+      print(even_numbers) # Output: [2, 4, 6]
+    </code>
+    <h2>Limitations of lambda functions</h2>
+    <p>
+        While lambda functions are powerful, they have some limitations:
+    <ul>
+    <li> Single Expression: Lambda functions can only contain one expression. If your logic requires more than a simple expression, it’s better to use a regular function.
+	</li>
+    <li>Readability: Overusing lambda functions can make your code hard to read and maintain. Use them judiciously and prefer named functions for complex logic.
+    </li>
+    </ul>
+	 </p>
+     <h2>Conclusion</h2>
+     <p>
+        Lambda functions are a handy tool in Python for creating small, anonymous functions quickly and concisely. They are best used for simple operations and can make your code more readable when used appropriately. However, for more complex logic, regular functions defined with def are generally a better choice.
+        Remember, readability comes first.
+     </p>
   </body>
 </html>

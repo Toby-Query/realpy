@@ -1,0 +1,38 @@
+body{
+    background-color:beige;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    min-height: 100vh
+}
+
+h1{
+    font-size: 3.3rem;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+li{
+    font-size: 1.5rem;
+}
+
+code{
+    font-size: 1.1rem;
+    background-color: #eeeef0;
+    width: 100%;
+    padding: 20px 0;
+    padding-left: 10px;
+}
+
+div{
+    padding-left: 30px;
+}
